@@ -1,9 +1,10 @@
 import './App.css';
+import Products from './Pages/Products';
 
 function App() {
   return (
     <div>
-    Hello  world!
+  <Products/>
     </div>
   );
 }
