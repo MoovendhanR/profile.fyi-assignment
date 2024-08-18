@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Cart.css'; 
+import {  useNavigate } from 'react-router-dom';
+
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
   const [discount, setDiscount] = useState({ type: '', amount: 0 });
@@ -8,7 +10,7 @@ const Cart = () => {
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
-        const response = await fetch('http://localhost:8080/cart');
+        const response = await fetch('https://profile-fyi-backend-db.onrender.com/cart');
         const data = await response.json();
         setCartItems(data);
       } catch (error) {
@@ -51,7 +53,7 @@ const Cart = () => {
     setCartItems(updatedCartItems);
 
     try {
-      await fetch(`http://localhost:8080/cart/${productId}`, {
+      await fetch(`https://profile-fyi-backend-db.onrender.com/cart/${productId}`, {
         method: 'DELETE'
       });
       console.log('Item removed successfully');
@@ -63,7 +65,7 @@ const Cart = () => {
   // update the item on the server
   const updateCartOnServer = async (productId, newQuantity) => {
     try {
-      await fetch(`http://localhost:8080/cart/${productId}`, {
+      await fetch(`https://profile-fyi-backend-db.onrender.com/cart/${productId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'
@@ -104,6 +106,18 @@ const Cart = () => {
     }));
   };
 
+// checkout button
+// const { cartItem } = useCart();
+const navigate = useNavigate();
+console.log("cartItem",cartItems)
+const handleCheckout = () => {
+  if (cartItems?.length > 0) {
+    navigate("/checkout");  
+  } else {
+    alert('Your cart is empty. Please add some items before checking out.');
+  }
+}
+
   return (
     <div className="cart-container">
       <h1>Your Cart</h1>
@@ -113,16 +127,16 @@ const Cart = () => {
         ) : (
           cartItems.map(item => (
             <div key={item.id} className="cart-item">
-              <img src={item.image} alt={item.title} className="cart-item-image" />
+              <img src={item?.image} alt={item?.title} className="cart-item-image" />
               <div className="cart-item-details">
-                <h2>{item.title}</h2>
-                <p>Price: ${item.price}</p>
-                <p>Quantity: {item.quantity || 1}</p>
+                <h2>{item?.title}</h2>
+                <p>Price: ${item?.price}</p>
+                <p>Quantity: {item?.quantity || 1}</p>
                 <div className="cart-item-actions">
-                  <button onClick={() => decreaseQuantity(item)} disabled={item.quantity <= 1}>-</button>
+                  <button onClick={() => decreaseQuantity(item)} disabled={item?.quantity <= 1}>-</button>
                   <button onClick={() => increaseQuantity(item)}>+</button>
                 </div>
-                <button className="remove-btn" onClick={() => removeItem(item.id)}>Remove</button>
+                <button className="remove-btn" onClick={() => removeItem(item?.id)}>Remove</button>
               </div>
             </div>
           ))
@@ -169,6 +183,9 @@ const Cart = () => {
           )}
         </div>
         <p>Total (including discounts): ${calculateTotalPrice()}</p>
+        <button onClick={handleCheckout} className="checkout-button">
+        Checkout
+      </button>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ export const CartProvider = ({ children }) => {
 
   const updateCartLength = async () => {
     try {
-      const response = await fetch('http://localhost:8080/cart');
+      const response = await fetch('https://profile-fyi-backend-db.onrender.com/cart');
       const items = await response.json();
       const totalItems = items.reduce((total, item) => total + (item.quantity || 1), 0);
       setCartLength(totalItems);

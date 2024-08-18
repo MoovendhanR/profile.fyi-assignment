@@ -6,7 +6,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/products")
+    fetch("https://profile-fyi-backend-db.onrender.com/products")
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.error('Error fetching data:', error));
@@ -16,7 +16,7 @@ const Products = () => {
    const  addToCart = async(product) => {
     try {
       // fetching current item
-      const cartResponse = await fetch('http://localhost:8080/cart');
+      const cartResponse = await fetch('https://profile-fyi-backend-db.onrender.com/cart');
       const cartItems = await cartResponse.json();
 
       // verifying
@@ -29,7 +29,7 @@ const Products = () => {
       }
 
       //proceeding
-      const response = await fetch('http://localhost:8080/cart', {
+      const response = await fetch('https://profile-fyi-backend-db.onrender.com/cart', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

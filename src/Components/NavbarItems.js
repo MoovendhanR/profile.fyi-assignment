@@ -1,4 +1,3 @@
-import CartLength from "./CartLength";
 
 const navbarItems = [
     {
