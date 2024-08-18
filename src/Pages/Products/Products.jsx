@@ -51,7 +51,7 @@ const Products = () => {
 
 
   return (
-    <div>
+    <div className='products-container'>
     <h1>Products List</h1>
     <div className="product-grid">
       {products.map(product => (

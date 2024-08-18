@@ -303,27 +303,39 @@
   ],
   "cart": [
     {
-      "id": "22",
-      "title": "F Gear Luxur Brown 25 liter Laptop Backpack (2404)",
-      "price": 1032,
-      "description": "A fashionable laptop backpack. This full-featured pack makes space for everything essential with multiple zip pockets on the exterior, plus a ready-to-go interior with padded laptop compartment and other storage solutions. Pattern: Solid. Laptop Size: 16",
-      "category": "bags",
-      "image": "https://m.media-amazon.com/images/I/81RtwUjQiFL._SY879_.jpg",
+      "id": "19",
+      "title": "Opna Women's Short Sleeve Moisture",
+      "price": 795,
+      "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
       "rating": {
-        "rate": 4.4,
-        "count": 165
+        "rate": 4.5,
+        "count": 146
       }
     },
     {
-      "id": "24",
-      "title": "Arrow Men's Slim Shirt",
-      "price": 949,
-      "description": "Arrow's shirts are an undeniable choice when you want to look your best. This formal shirt features a point collar and full sleeve while the combination of fine tailoring and soft fabric gives you a smart & crisp look.",
-      "category": "men's clothing",
-      "image": "https://m.media-amazon.com/images/I/71OLkBVHc+L._UY879_.jpg",
+      "id": "20",
+      "title": "DANVOUY Womens T Shirt Casual Cotton Short",
+      "price": 129,
+      "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
       "rating": {
-        "rate": 4,
-        "count": 176
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": "15",
+      "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+      "price": 56.99,
+      "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+      "rating": {
+        "rate": 2.6,
+        "count": 235
       }
     }
   ],

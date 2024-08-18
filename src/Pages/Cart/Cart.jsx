@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './Cart.css'; 
-import CartLength from '../../Components/CartLength';
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
   const [discount, setDiscount] = useState({ type: '', amount: 0 });
@@ -107,7 +106,6 @@ const Cart = () => {
 
   return (
     <div className="cart-container">
-        <CartLength/>
       <h1>Your Cart</h1>
       <div className="cart-grid">
         {cartItems.length === 0 ? (
@@ -171,7 +169,6 @@ const Cart = () => {
           )}
         </div>
         <p>Total (including discounts): ${calculateTotalPrice()}</p>
-        <CartLength/>
       </div>
     </div>
   );
