@@ -1,104 +1,37 @@
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 16px; 
-  padding: 16px;
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700&display=swap");
+
+* {
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
 }
 
-/* Product card */
-.product-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #fff;
-  transition: transform 0.3s ease;
+:root {
+ --header-height: 3.5rem;
+ --first-color: hsl(28, 88%, 62%);
+ --title-color: hsl(0, 0%, 95%);
+ --text-color: hsl(0, 0%, 75%);
+ --body-color: hsl(0, 0%, 6%);
+ --body-font: "Montserrat", sans-serif;
+ --second-font: "Dancing Script", cursive;
+ --h2-font-size: 1.25rem;
+ --small-font-size: 0.813rem;
+ --font-semi-bold: 600;
+ --z-tooltip: 10;
+ --z-fixed: 100;
 }
 
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+body {
+ background-color: var(--body-color);
+ color: var(--text-color);
+ font-family: var(--body-font);
 }
 
-.product-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+ul {
+ list-style: none;
 }
 
-.product-info {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-}
-
-.product-title {
-  font-size: 1.2em;
-  margin: 0 0 10px;
-  color: #333;
-}
-
-.product-category {
-  font-size: 0.9em;
-  color: #888;
-  margin-bottom: 10px;
-}
-
-.product-description {
-  font-size: 0.95em;
-  color: #555;
-  margin-bottom: 15px;
-  height: 60px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.product-price {
-  font-size: 1.1em;
-  color: #000;
-  margin-bottom: 10px;
-}
-
-.product-rating {
-  font-size: 0.9em;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.add-to-cart-btn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-  font-size: 1em;
-  transition: background-color 0.3s ease;
-}
-
-.add-to-cart-btn:hover {
-  background-color: #0056b3;
-}
-
-/* Responsive*/
-@media (max-width: 1024px) {
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
-  }
-}
-
-@media (max-width: 768px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for small tablets and large phones */
-  }
-}
-
-@media (max-width: 480px) {
-  .product-grid {
-    grid-template-columns: 1fr; /* 1 column for mobile phones */
-  }
+a {
+ text-decoration: none;
 }

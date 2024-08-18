@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import ProductCard from '../Components/ProductCard';
+import ProductCard from '../../Components/ProductCard';
+import './Products.css';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -14,20 +15,20 @@ const Products = () => {
 
    const  addToCart = async(product) => {
     try {
-      // Fetch the current items in the cart
+      // fetching current item
       const cartResponse = await fetch('http://localhost:8080/cart');
       const cartItems = await cartResponse.json();
 
-      // Check if the product is already in the cart
+      // verifying
       const isProductInCart = cartItems.some(item => item.id === product.id);
 
       if (isProductInCart) {
         alert("Product is already in the cart")
         console.log('Product is already in the cart');
-        return; // Exit the function if the product is already in the cart
+        return; 
       }
 
-      // If the product is not in the cart, proceed to add it
+      //proceeding
       const response = await fetch('http://localhost:8080/cart', {
         method: 'POST',
         headers: {
